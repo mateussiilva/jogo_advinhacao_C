@@ -5,16 +5,20 @@ int main(){
   printf(" BEM VINDO AO JOGO DA ADVINHAÇÃO\n");
   printf("---------------------------------\n");
   int chute, numeroSecreto = 10;
+  int acertou;
   for(int i = 1; i <= 3; i++){
-    scanf("%d",chute);
-    int acertou = chute == numeroSecreto;
+    printf("\nDigite um numero: ");
+    scanf("%d",&chute);
+    acertou = chute == numeroSecreto;
     if (acertou){
       printf("Parabens você acertou");
       i = 3;
     }else{
       int maior = chute > numeroSecreto;
       if(maior){
-        printf("O");
+        printf("O pouco MENOS");
+      }else{
+        printf("O pouco MAIS");
       }
     }
   }
